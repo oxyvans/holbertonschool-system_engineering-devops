@@ -1,2 +1,2 @@
 #!/bin/bash
-find .empty -print0
+find -empty -printf "%c\n"
