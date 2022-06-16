@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#hora pkda
+
+i=0
+while ((i < 13))
+do
+    echo "Hour: "$i
+    n=1
+    while ((n < 60))
+    do
+        echo $n
+        ((n++))
+    done
+    ((i++))
+done
