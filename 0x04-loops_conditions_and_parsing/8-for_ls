@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#ls and cut
+
+for i in *;
+do
+    echo "$i" | cut -d'-' -f2
+done
