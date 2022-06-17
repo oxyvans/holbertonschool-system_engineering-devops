@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# pid bash
+pgrep --list-name "bash"
