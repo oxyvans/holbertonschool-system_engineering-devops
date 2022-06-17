@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# bash____process
+ps -a u | grep 'bash'
