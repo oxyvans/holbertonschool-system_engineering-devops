@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# task 100
+nc -l 98
