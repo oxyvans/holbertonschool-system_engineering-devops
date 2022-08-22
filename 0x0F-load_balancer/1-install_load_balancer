@@ -7,14 +7,14 @@ apt install -y haproxy
 
 printf %s "
         frontend http_front
-                bind *:80
-                stats uri /haproxy?stats
-                default_backend http_back
+		bind *:80
+		stats uri /haproxy?stats
+		default_backend http_back
 
         backend http_back
-        balance roundrobin
-        server 4436-web-01 107.23.23.248:80 check
-        server 4436-web-02 107.21.59.242:80 check
+		balance roundrobin
+		server 4436-web-01 107.23.23.248:80 check
+		server 4436-web-02 107.21.59.242:80 check
 " >> /etc/haproxy/haproxy.cfg
 
 systemctl restart haproxy
