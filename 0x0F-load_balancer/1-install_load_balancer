@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 # task 1
 
-apt update
-apt upgrade -y
-apt install -y haproxy
+apt-get update
+apt-get install -y haproxy
 
 printf %s "
         frontend http_front
