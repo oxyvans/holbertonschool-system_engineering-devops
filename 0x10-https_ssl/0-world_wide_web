@@ -10,8 +10,8 @@ then
 	sub=("www" "lb-01" "web-01" "web-02")
 	for i in "${sub[@]}"
 	do
-		printInfo "$1" "$i";
+		printInfo $1 $i;
 	done
 else
-	printInfo "$1" "$2"
+	printInfo $1 $2
 fi
