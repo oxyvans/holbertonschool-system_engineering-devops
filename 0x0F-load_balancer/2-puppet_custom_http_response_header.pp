@@ -1,8 +1,7 @@
-#puppilete
+# http header with Puppet.
 
 exec { 'update':
   command => 'sudo apt-get update',
-  path    => ['/usr/bin', '/bin'],
 }
 
 package { 'nginx':
@@ -10,7 +9,7 @@ package { 'nginx':
     require => exec['update'],
 }
 
-file_line { 'Header':
+file_line { 'addHeader':
   ensure  => 'present',
   path    => '/etc/nginx/sites-available/default',
   after   => 'listen 80 default_server;',
@@ -18,8 +17,8 @@ file_line { 'Header':
   require => Package['nginx'],
 }
 
-exec { 'restart':
-  command => 'sudo service nginx restart',
-  path    => ['/usr/bin', '/bin'],
-  require => File_line['Header'],
-}`
+
+service { 'nginx':
+  ensure  => running,
+  require => Package['nginx'],
+}
