@@ -14,4 +14,3 @@ then
 else
 	printInfo "$1" "$2"
 fi
-
