@@ -2,6 +2,7 @@
 
 exec { 'update':
   command => 'sudo apt-get update',
+  path    => ['/usr/bin', '/bin'],
 }
 
 package { 'nginx':
@@ -17,7 +18,8 @@ file_line { 'Header':
   require => Package['nginx'],
 }
 
-service { 'nginx':
-  ensure  => running,
-  require => Package['nginx'],
-}
+exec { 'restart':
+  command => 'sudo service nginx restart',
+  path    => ['/usr/bin', '/bin'],
+  require => File_line['Header'],
+}`
