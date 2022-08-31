@@ -1,4 +1,1 @@
-#!/usr/bin/env bash
-# task 0
 
-sudo -u "$1" whoami
