@@ -13,7 +13,7 @@ if __name__ == '__main__':
     t = 0
     complit = []
     for w in all:
-        if w['completed'] == True:
+        if w['completed'] is True:
             c += 1
             t += 1
             complit.append(w["title"])
