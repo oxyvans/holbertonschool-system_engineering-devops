@@ -18,6 +18,5 @@ if __name__ == '__main__':
         td["username"] = users["username"]
         t.append(td)
 
-    res[argv[1]] = t
     with open("{}.json".format(str(argv[1])), mode='w') as f:
         json.dump(res, f)
