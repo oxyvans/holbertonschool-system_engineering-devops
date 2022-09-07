@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 """ apiarda """
 
-
 import csv
 import requests
 from sys import argv
-
 
 if __name__ == '__main__':
     path = "https://jsonplaceholder.typicode.com/"
