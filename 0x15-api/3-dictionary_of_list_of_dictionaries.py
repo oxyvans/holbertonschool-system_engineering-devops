@@ -8,6 +8,6 @@ if __name__ == '__main__':
     path = "https://jsonplaceholder.typicode.com/"
     users = requests.get(path + "users").json()
     all = requests.get(path + "todos").json()
-
-    with open("{}.json".format(str(argv[1])), mode='w') as f:
+    res = {}
+    with open("todo_all_employees.json", mode='w') as f:
         json.dump(res, f)
