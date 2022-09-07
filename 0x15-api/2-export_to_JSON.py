@@ -12,4 +12,5 @@ if __name__ == '__main__':
         
     res = {}
     with open('{}.json'.format(str(argv[1])), mode='w') as f:
+        """ open """
         json.dump(res, f)
