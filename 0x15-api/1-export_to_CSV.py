@@ -3,6 +3,8 @@
 import csv
 import requests
 from sys import argv
+
+
 if __name__ == '__main__':
     path = "https://jsonplaceholder.typicode.com/"
     users = requests.get(path + "users/{}".format(argv[1])).json()
