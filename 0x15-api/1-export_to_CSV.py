@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ apiarda """
+
+
 import csv
 import requests
 from sys import argv
